@@ -8,25 +8,25 @@ categories: "it"
 title: "MySQL: работаем с дампами"
 ---
 
-TODO `--hostname localhost --port=3306 --protocol=tcp --compress --opt --all-databases`
+TODO `--hostname localhost --port=3306 --protocol=tcp --compress --all-databases`
 
 ## Базовые операции
 
 ```bash
-mysqldump --opt --user username --password database
+mysqldump --user username --password database
 ```
 
 Команда отработает, вывалив содержимое базы данных прямо в консоль. Упс.  
 Чтобы получить файл дампа нужно перенаправить `stdout` команды в файл:
 
 ```bash
-mysqldump --opt --user username --password database > database.sql
+mysqldump --user username --password database > database.sql
 ```
 
 И, файл создался! Одна проблема, база была не маленькой и теперь в нашем распоряжении файл размером в несколько гигабайт. Было бы неплохо его сжать. Желательно на ходу, чтобы не занимать лишнего места:
 
 ```bash
-mysqldump --opt --user username --password database | gzip -9 > database.sql
+mysqldump --user username --password database | gzip -9 > database.sql
 ```
 
 Это сделает дамп меньше. Гораздо меньше.
@@ -51,14 +51,14 @@ zcat database.sql.gz | mysql --user username --password database
 Если сервер находиться на **удаленной** машине, к консоли которой можно получить доступ то для снятия дампа сложных "заклинаний" не потребуется. Просто подключаемся к нему по SSH и даем команду:
 
 ```bash
-mysqldump --opt --user username --password database | gzip -9 > database.sql.gz
+mysqldump --user username --password database | gzip -9 > database.sql.gz
 ```
 
 Да, такую же как для локального дампа. Если сервер не на этой машине, но доступен с нее, можно добавить `--hostname db.server.address`, `--port=3306`. И `--compress`, чтобы поток от сервера базы к нам также был сжат. После всех манипуляций файл дампа ляжет в текущей директории. Забрать его можно будет используя `sftp`, `scp` или `rsync`.  
 А можно ли так чтобы дамп сразу себе? Рад что вы спросили:
 
 ```bash
-ssh $SERVER_USERNAME@SERVER_ADDRESS "mysqldump --opt --user username --password database | gzip -9" > database.sql.gz
+ssh $SERVER_USERNAME@SERVER_ADDRESS "mysqldump --user username --password database | gzip -9" > database.sql.gz
 ```
 
 `mtsqldump` будет выполнен на удаленном сервере, затем его вывод будет сжат и отправлен в `stdout` который уже на нашей стороне будет перенаправлен в файл. Трюк с `--hostname db.server.address`, `--port=3306` и `--compress` можно применить и здесь.
@@ -89,7 +89,7 @@ ssh -L 3307:db.infra.lan:3306 -N username@host.infra.lan
 
 ```bash
 # снять дамп
-mysqldump --opt --port 3307 --host 127.0.0.1 --user username --password database | gzip -9 > database.sql.gz
+mysqldump --port 3307 --host 127.0.0.1 --user username --password database | gzip -9 > database.sql.gz
 # восстановить дамп
 zcat database.sql.gz | mysql --user username --password database
 ```
@@ -97,6 +97,3 @@ zcat database.sql.gz | mysql --user username --password database
 > **NOTE**  
 > Для работы через тоннель необходимо использовать параметры `--port` и `--host` для того чтобы указать, что нужно подключаться используя определенный порт, а не локальный сокет.
 
-## что такое этот --opt
-
-TODO: ДОПИСАТЬ!!!
