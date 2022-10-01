@@ -6,7 +6,7 @@ images: ["/images/Pope-Edouard-de-Beaumont-1844.jpg"]
 tags: ["scene"]
 categories: "Story"
 title: "Индукционные дайсы"
-draft: fasle
+draft: true
 ---
 
 # Идея

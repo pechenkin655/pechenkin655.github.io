@@ -3,12 +3,10 @@ date: 2017-04-09T10:58:08-04:00
 description: "???"
 featured_image: "/hero/mysql.png"
 images: ["/hero/mysql.png"]
-tags: ["linux", "system administration"]
+tags: ["linux", "database administration", "mysql"]
 categories: "it"
 title: "MySQL: работаем с дампами"
 ---
-
-TODO `--hostname localhost --port=3306 --protocol=tcp --compress --all-databases`
 
 ## Базовые операции
 

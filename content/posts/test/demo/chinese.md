@@ -5,6 +5,7 @@ featured_image: "/images/chinese.jpg"
 tags: [Chinese,text]
 title: "中文文本测试"
 categories: Chinese
+draft: true
 ---
 
 
