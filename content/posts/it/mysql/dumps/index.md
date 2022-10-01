@@ -10,6 +10,8 @@ title: "MySQL: работаем с дампами"
 
 ## Базовые операции
 
+Начнем с простого. Снятие дампа:
+
 ```bash
 mysqldump --user username --password database
 ```

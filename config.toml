@@ -3,10 +3,10 @@
 # title = 'My New Hugo Site'
 
 
-baseURL = "http://example.org/"
+baseURL = "http://automationismagic.blog/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "A Hugo Site"
+title = "Automation is Magic"
 copyright = "This is a customized copyright."
 theme = "diary"
 # googleAnalytics = "UA-123-45"
@@ -24,14 +24,14 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "Themed by Diary."
+subtitle = "Lerning, while doing stuff and experimenting"
 enableGitalk = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
-title = "My Blog" # will set 'og:site_name'
-description = "My HomePage Description"  # will set 'og:description'
+title = "Automation is Magic" # will set 'og:site_name'
+description = "Lerning, while doing stuff and experimenting"  # will set 'og:description'
 
 [params.gitalk]
   owner = "user"
