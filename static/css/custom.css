@@ -1,0 +1,18 @@
+.stream-container .post .post-body-wrapper .post-body {
+    font-size: 1.4rem !important; 
+}
+
+.stream-container .post .post-body-wrapper .post-body > h1,
+.stream-container .post .post-body-wrapper .post-body > h2,
+.stream-container .post .post-body-wrapper .post-body > h3,
+.stream-container .post .post-body-wrapper .post-body > h4 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.stream-container .post .post-body-wrapper .post-body > h1:first-child,
+.stream-container .post .post-body-wrapper .post-body > h2:first-child,
+.stream-container .post .post-body-wrapper .post-body > h3:first-child,
+.stream-container .post .post-body-wrapper .post-body > h4:first-child {
+    margin-top: 0;
+}

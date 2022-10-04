@@ -24,14 +24,14 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "Lerning, while doing stuff and experimenting"
+subtitle = "Lerning new things, while making (and breaking) stuff"
 enableGitalk = true
 
 # Twitter Card and Open Graph settings
 enableOpenGraph = true
 enableTwitterCards = true
 title = "Automation is Magic" # will set 'og:site_name'
-description = "Lerning, while doing stuff and experimenting"  # will set 'og:description'
+description = "Lerning new things, while making (and breaking) stuff"  # will set 'og:description'
 
 [params.gitalk]
   owner = "user"
@@ -50,17 +50,17 @@ theme="github-light"
 
 [[menu.main]]
 url = "/categories"
-name = "Categories"
+name = "Категории"
 weight = 2
 [[menu.main]]
 url = "/tags"
-name = "Tags"
+name = "Теги"
 weight = 3
 [[menu.main]]
 url = "/posts/"
-name = "Archive"
+name = "Архив"
 weight = 1
 [[menu.main]]
 url = "/index.xml"
-name = "RSS Feed"
+name = "RSS"
 weight = 4
