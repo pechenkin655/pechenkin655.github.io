@@ -1,6 +1,6 @@
 ---
 date: 2022-10-21T18:00:00+02:00
-description: "Hello world"
+description: "А вы чего ожидали первым постом? :)"
 featured_image: "/hero/hello-world.png"
 images: ["/hero/hello-world.png"]
 tags: ["blog"]
