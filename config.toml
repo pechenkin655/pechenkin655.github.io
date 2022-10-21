@@ -34,10 +34,10 @@ title = "Automation is Magic" # will set 'og:site_name'
 description = "Lerning new things, while making (and breaking) stuff"  # will set 'og:description'
 
 [params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
+  owner = "pechenkin655"
+  repo = "pechenkin655.github.io"
+  client_id = "d41a509c14d99d4478ac"
+  client_secret = "d5c879d49a47243584c30e1beb7963e94b1c4d4b"
 [taxonomies]
    tag = "tags"
    category = "categories"
